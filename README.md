@@ -42,7 +42,9 @@ z is normalized before training and denormalized after. Discriminator is updated
 
 ![Training Loss](training_loss.png)
 
-![PDF Estimation](pdf_estimation_gan.png)
+![KDE](pdf_kde_gan.png)
+
+![Histogram](pdf_hist_gan.png)
 
 ## Observations
 
