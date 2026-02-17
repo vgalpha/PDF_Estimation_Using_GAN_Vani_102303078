@@ -11,7 +11,9 @@ Link: https://www.kaggle.com/datasets/shrutibhargava94/india-air-quality-data
 ## Transformation
 
 r = 102303078
+
 a_r = 0.5 * (r mod 7) = 1.5
+
 b_r = 0.3 * (r mod 5 + 1) = 1.2
 
 z = x + 1.5 * sin(1.2 * x)
