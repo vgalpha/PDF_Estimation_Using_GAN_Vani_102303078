@@ -42,9 +42,15 @@ z is normalized before training and denormalized after. Discriminator is updated
 
 ![Training Loss](training_loss.png)
 
+*G and D losses converging over 3000 epochs*
+
 ![KDE](pdf_kde_gan.png)
 
+*KDE (Kernel Density Estimation) of real z vs GAN generated samples — curves are close so the GAN learned the distribution*
+
 ![Histogram](pdf_hist_gan.png)
+
+*Histogram of real z vs generated z — shapes match reasonably well*
 
 ## Observations
 
