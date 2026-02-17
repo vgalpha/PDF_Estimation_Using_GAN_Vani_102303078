@@ -56,7 +56,7 @@ z is normalized before training and denormalized after. Discriminator is updated
 
 **Mode coverage:** The generated mean is very close to the real mean so the GAN is capturing the main peak of the distribution.
 
-**Training stability:** Both losses settle near 0.693 (log 2) which means the discriminator can't tell real from fake — that's the expected equilibrium.
+**Training stability:** Generator loss settles near 0.693 (log 2). Discriminator loss settles near 1.386 (2 × log 2) because it sums BCE over real and fake batches. This is the expected equilibrium for this setup.
 
 **Quality:** The spread of generated samples is close to the real std. The KDE curves overlap well on the plot.
 

@@ -173,27 +173,5 @@ print(f"\nreal z   mean={z.mean():.3f}  std={z.std():.3f}")
 print(f"fake z_f mean={z_fake.mean():.3f}  std={z_fake.std():.3f}")
 print(f"final D loss: {d_loss_list[-1]:.4f}  G loss: {g_loss_list[-1]:.4f}")
 
-mean_diff = abs(z.mean() - z_fake.mean())
-std_diff = abs(z.std() - z_fake.std())
-final_avg_loss = (d_loss_list[-1] + g_loss_list[-1]) / 2
-
-print(f"\nmean diff: {mean_diff:.3f}")
-if mean_diff < 1.0:
-    print("mode coverage ok - generated mean is close to real")
-else:
-    print("some mode shift, generated mean is off")
-
-print(f"avg final loss: {final_avg_loss:.4f}  (ideal ~0.693)")
-if abs(final_avg_loss - 0.693) < 0.15:
-    print("training looks stable")
-else:
-    print("training may not have converged fully")
-
-print(f"std diff: {std_diff:.3f}")
-if std_diff < z.std() * 0.2:
-    print("spread of generated samples is close to real")
-else:
-    print("spread differs, might need more epochs")
-
 torch.save(G.state_dict(), "generator.pth")
 print("generator weights saved")
